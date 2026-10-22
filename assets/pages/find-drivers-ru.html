@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joldo - Найти водителей</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/finddrivers.css">
+</head>
+<body>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+    <header>
+        <nav class="navbar lg:navbar-expand bg-1 fg-2" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center py-0" href="../../index-ru.html" id="joldo-logo">
+                    <img src="../img/joldo-logo.svg" alt="Joldo">
+                </a>
+                <dialog class="drawer drawer-start" tabindex="-1" id="navbarLeftDrawer" aria-labelledby="navbarLeftDrawerLabel">
+                    <div class="drawer-header">
+                        <h5 class="drawer-title" id="navbarLeftDrawerLabel">Меню</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                    </div>
+                </dialog>
+                <div class="div-btn-auth">
+                    <button type="button" class="btn">
+                        <a href="authorization-ru.html">Вход</a>
+                    </button>
+                </div>
+                <button class="btn-icon" type="button" data-bs-toggle="menu" aria-expanded="false">
+                    <img src="../img/ru.png" alt="" width="30px">
+                </button>
+                <div class="menu">
+                    <a class="menu-item" href="find-drivers.html">
+                        <img src="../img/kg.png" alt="" width="20px">
+                    </a>
+                    <a class="menu-item" href="find-drivers-en.html">
+                        <img src="../img/us.png" alt="" width="20px">
+                    </a>
+                </div>
+                <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarLeftDrawer" aria-controls="navbarLeftDrawer" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="fd-section">
+            <div class="container">
+                <div class="fd-head text-center">
+                    <h1 class="fd-title">Найти водителей</h1>
+                    <span class="fd-line"></span>
+                    <p class="fd-sub">Укажите маршрут, выберите водителя и договоритесь о цене в чате.</p>
+                </div>
+                <div class="fd-row row align-items-center g-4">
+                    <div class="col-12 lg:col-6">
+                        <div class="fd-switch">
+                            <input type="radio" name="when" id="when-now" checked>
+                            <input type="radio" name="when" id="when-later">
+                            <span class="fd-switch-bg"></span>
+                            <label for="when-now">Сейчас</label>
+                            <label for="when-later">Запланировать</label>
+                        </div>
+                        <div class="fd-field">
+                            <input class="fd-input" type="text" id="fd-from" placeholder=" ">
+                            <label class="fd-label" for="fd-from">Откуда забрать</label>
+                        </div>
+                        <div class="fd-field">
+                            <input class="fd-input" type="text" id="fd-to" placeholder=" ">
+                            <label class="fd-label" for="fd-to">Куда поедем</label>
+                        </div>
+                        <div class="fd-field fd-time">
+                            <input class="fd-input" type="time" id="fd-time" placeholder=" ">
+                            <label class="fd-label" for="fd-time">Время поездки</label>
+                        </div>
+                        <div class="fd-actions">
+                            <a href="#drivers" class="fd-btn">Найти водителей</a>
+                            <button type="button" class="fd-btn fd-btn-light" id="shareBtn">Поделиться поездкой</button>
+                        </div>
+                    </div>
+                    <div class="col-12 lg:col-6">
+                        <div class="fd-map">
+                            <iframe
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=74.50,42.83,74.65,42.91&layer=mapnik&marker=42.87,74.59"
+                                title="Карта города"
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="fd-section" id="drivers">
+            <div class="container">
+                <div class="fd-list-head">
+                    <h2 class="fd-list-title">Водители рядом</h2>
+                    <span class="fd-count">Найдено: 4</span>
+                </div>
+                <article class="fd-driver fd-driver-best">
+                    <div class="fd-avatar">А</div>
+                    <div>
+                        <h3 class="fd-name">Азамат</h3>
+                        <span class="fd-rating">★ 4.9 <span class="fd-trips">· 312 поездок</span></span>
+                        <p class="fd-car">Белая Toyota Camry</p>
+                    </div>
+                    <div class="fd-meta">
+                        <p class="fd-price">600 сом</p>
+                        <p class="fd-eta">Приедет через 4 мин</p>
+                    </div>
+                    <div class="fd-driver-actions">
+                        <button type="button" class="fd-btn fd-btn-light fd-write" data-name="Азамат">Написать</button>
+                        <button type="button" class="fd-btn fd-pick" data-name="Азамат">Выбрать</button>
+                    </div>
+                </article>
+                <article class="fd-driver">
+                    <div class="fd-avatar">Б</div>
+                    <div>
+                        <h3 class="fd-name">Бакыт</h3>
+                        <span class="fd-rating">★ 4.8 <span class="fd-trips">· 187 поездок</span></span>
+                        <p class="fd-car">Серая Honda Fit</p>
+                    </div>
+                    <div class="fd-meta">
+                        <p class="fd-price">650 сом</p>
+                        <p class="fd-eta">Приедет через 6 мин</p>
+                    </div>
+                    <div class="fd-driver-actions">
+                        <button type="button" class="fd-btn fd-btn-light fd-write" data-name="Бакыт">Написать</button>
+                        <button type="button" class="fd-btn fd-pick" data-name="Бакыт">Выбрать</button>
+                    </div>
+                </article>
+                <article class="fd-driver">
+                    <div class="fd-avatar">Н</div>
+                    <div>
+                        <h3 class="fd-name">Нурлан</h3>
+                        <span class="fd-rating">★ 4.7 <span class="fd-trips">· 96 поездок</span></span>
+                        <p class="fd-car">Чёрная Hyundai Elantra</p>
+                    </div>
+                    <div class="fd-meta">
+                        <p class="fd-price">700 сом</p>
+                        <p class="fd-eta">Приедет через 9 мин</p>
+                    </div>
+                    <div class="fd-driver-actions">
+                        <button type="button" class="fd-btn fd-btn-light fd-write" data-name="Нурлан">Написать</button>
+                        <button type="button" class="fd-btn fd-pick" data-name="Нурлан">Выбрать</button>
+                    </div>
+                </article>
+                <article class="fd-driver">
+                    <div class="fd-avatar">Э</div>
+                    <div>
+                        <h3 class="fd-name">Эрлан</h3>
+                        <span class="fd-rating">★ 4.9 <span class="fd-trips">· 241 поездка</span></span>
+                        <p class="fd-car">Синяя Kia Rio</p>
+                    </div>
+                    <div class="fd-meta">
+                        <p class="fd-price">720 сом</p>
+                        <p class="fd-eta">Приедет через 11 мин</p>
+                    </div>
+                    <div class="fd-driver-actions">
+                        <button type="button" class="fd-btn fd-btn-light fd-write" data-name="Эрлан">Написать</button>
+                        <button type="button" class="fd-btn fd-pick" data-name="Эрлан">Выбрать</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <dialog class="fd-chat" id="chatDialog">
+        <div class="fd-chat-head">
+            <span id="chatName">Водитель</span>
+            <button type="button" class="fd-chat-close" id="chatClose" aria-label="Закрыть чат">✕</button>
+        </div>
+        <div class="fd-chat-body" id="chatBody"></div>
+        <form class="fd-chat-form" id="chatForm">
+            <input class="fd-chat-input" type="text" id="chatInput" placeholder="Напишите сообщение" autocomplete="off">
+            <button type="submit" class="fd-chat-send">Отправить</button>
+        </form>
+    </dialog>
+    <dialog class="fd-sos-dialog" id="sosDialog">
+        <div class="fd-sos-box">
+            <h2 class="fd-sos-title">SOS</h2>
+            <p class="fd-sos-text">Если вам угрожает опасность, сразу позвоните в экстренную службу. Вы также можете отправить свою геолокацию близким.</p>
+            <a href="tel:112" class="fd-btn fd-sos-call">Позвонить 112</a>
+            <button type="button" class="fd-btn fd-btn-light" id="sosLocation">Отправить мою геолокацию</button>
+            <button type="button" class="fd-btn fd-btn-light" id="sosCancel">Отмена</button>
+        </div>
+    </dialog>
+    <button type="button" class="fd-sos" id="sosBtn" aria-label="Экстренная помощь">SOS</button>
+    <div class="fd-toast" id="toast"></div>
+    <script>
+        const chatDialog = document.getElementById('chatDialog');
+        const chatName = document.getElementById('chatName');
+        const chatBody = document.getElementById('chatBody');
+        const chatForm = document.getElementById('chatForm');
+        const chatInput = document.getElementById('chatInput');
+        const sosDialog = document.getElementById('sosDialog');
+        const toast = document.getElementById('toast');
+
+        const greetings = {
+            'Азамат': 'Здравствуйте! Подъеду через 4 минуты.',
+            'Бакыт': 'Добрый день! Могу быть у вас через 6 минут.',
+            'Нурлан': 'Здравствуйте! Я свободен, скоро подъеду.',
+            'Эрлан': 'Добрый день! Готов ехать, пишите, если нужно что-то уточнить.'
+        };
+        const history = {};
+        let currentDriver = '';
+
+        function showToast(text) {
+            toast.textContent = text;
+            toast.classList.add('show');
+            setTimeout(function () {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        function renderChat() {
+            chatBody.innerHTML = '';
+            history[currentDriver].forEach(function (m) {
+                const div = document.createElement('div');
+                div.className = 'fd-msg ' + (m.from === 'me' ? 'fd-msg-me' : 'fd-msg-driver');
+                div.textContent = m.text;
+                chatBody.appendChild(div);
+            });
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        document.querySelectorAll('.fd-write').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                currentDriver = btn.dataset.name;
+                chatName.textContent = currentDriver;
+                if (!history[currentDriver]) {
+                    history[currentDriver] = [{ from: 'driver', text: greetings[currentDriver] }];
+                }
+                renderChat();
+                chatDialog.showModal();
+            });
+        });
+
+        chatForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const text = chatInput.value.trim();
+            if (text === '') return;
+            history[currentDriver].push({ from: 'me', text: text });
+            chatInput.value = '';
+            renderChat();
+        });
+
+        document.getElementById('chatClose').addEventListener('click', function () {
+            chatDialog.close();
+        });
+
+        document.querySelectorAll('.fd-pick').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                showToast('Вы выбрали водителя: ' + btn.dataset.name);
+            });
+        });
+
+        document.getElementById('shareBtn').addEventListener('click', function () {
+            const from = document.getElementById('fd-from').value || 'не указано';
+            const to = document.getElementById('fd-to').value || 'не указано';
+            const text = 'Моя поездка с Joldo. Откуда: ' + from + '. Куда: ' + to + '.';
+
+            if (navigator.share) {
+                navigator.share({ title: 'Моя поездка', text: text, url: location.href }).catch(function () {});
+            } else if (navigator.clipboard) {
+                navigator.clipboard.writeText(text + ' ' + location.href).then(function () {
+                    showToast('Данные поездки скопированы');
+                }, function () {
+                    showToast('Не удалось скопировать');
+                });
+            } else {
+                showToast('Ваш браузер не поддерживает отправку');
+            }
+        });
+
+        document.getElementById('sosBtn').addEventListener('click', function () {
+            sosDialog.showModal();
+        });
+
+        document.getElementById('sosCancel').addEventListener('click', function () {
+            sosDialog.close();
+        });
+
+        document.getElementById('sosLocation').addEventListener('click', function () {
+            if (!navigator.geolocation) {
+                showToast('Геолокация недоступна');
+                return;
+            }
+            navigator.geolocation.getCurrentPosition(function (pos) {
+                const lat = pos.coords.latitude;
+                const lon = pos.coords.longitude;
+                const link = 'https://www.openstreetmap.org/?mlat=' + lat + '&mlon=' + lon + '#map=17/' + lat + '/' + lon;
+                const text = 'Мне нужна помощь! Моя геолокация: ' + link;
+
+                if (navigator.share) {
+                    navigator.share({ text: text }).catch(function () {});
+                } else if (navigator.clipboard) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        showToast('Геолокация скопирована');
+                    });
+                }
+            }, function () {
+                showToast('Не удалось определить геолокацию');
+            });
+        });
+
+        [chatDialog, sosDialog].forEach(function (d) {
+            d.addEventListener('click', function (e) {
+                if (e.target === d) d.close();
+            });
+        });
+    </script>
+</body>
+</html>

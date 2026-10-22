@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joldo - Find drivers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/finddrivers.css">
+</head>
+<body>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+    <header>
+        <nav class="navbar lg:navbar-expand bg-1 fg-2" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center py-0" href="../../index-en.html" id="joldo-logo">
+                    <img src="../img/joldo-logo.svg" alt="Joldo">
+                </a>
+                <dialog class="drawer drawer-start" tabindex="-1" id="navbarLeftDrawer" aria-labelledby="navbarLeftDrawerLabel">
+                    <div class="drawer-header">
+                        <h5 class="drawer-title" id="navbarLeftDrawerLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                    </div>
+                    <div class="drawer-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item"><a class="nav-link" href="../../index-en.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../index-en.html#aboutus">About us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../index-en.html#poezdka">Ride</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../index-en.html#driver">For drivers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../index-en.html#contacts">Contacts</a></li>
+                        </ul>
+                    </div>
+                </dialog>
+                <div class="div-btn-auth">
+                    <button type="button" class="btn">
+                        <a href="authorization-en.html">Log in</a>
+                    </button>
+                </div>
+                <button class="btn-icon" type="button" data-bs-toggle="menu" aria-expanded="false">
+                    <img src="../img/us.png" alt="" width="30px">
+                </button>
+                <div class="menu">
+                    <a class="menu-item" href="find-drivers-ru.html">
+                        <img src="../img/ru.png" alt="" width="20px">
+                    </a>
+                    <a class="menu-item" href="find-drivers.html">
+                        <img src="../img/kg.png" alt="" width="20px">
+                    </a>
+                </div>
+                <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarLeftDrawer" aria-controls="navbarLeftDrawer" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="fd-section">
+            <div class="container">
+                <div class="fd-head text-center">
+                    <h1 class="fd-title">Find drivers</h1>
+                    <span class="fd-line"></span>
+                    <p class="fd-sub">Enter your route, choose a driver and agree on the price in the chat.</p>
+                </div>
+
+                <div class="fd-row row align-items-center g-4">
+                    <div class="col-12 lg:col-6">
+                        <div class="fd-switch">
+                            <input type="radio" name="when" id="when-now" checked>
+                            <input type="radio" name="when" id="when-later">
+                            <span class="fd-switch-bg"></span>
+                            <label for="when-now">Now</label>
+                            <label for="when-later">Schedule</label>
+                        </div>
+                        <div class="fd-field">
+                            <input class="fd-input" type="text" id="fd-from" placeholder=" ">
+                            <label class="fd-label" for="fd-from">Pick-up location</label>
+                        </div>
+                        <div class="fd-field">
+                            <input class="fd-input" type="text" id="fd-to" placeholder=" ">
+                            <label class="fd-label" for="fd-to">Drop-off location</label>
+                        </div>
+                        <div class="fd-field fd-time">
+                            <input class="fd-input" type="time" id="fd-time" placeholder=" ">
+                            <label class="fd-label" for="fd-time">Ride time</label>
+                        </div>
+                        <div class="fd-actions">
+                            <a href="#drivers" class="fd-btn">Find drivers</a>
+                            <button type="button" class="fd-btn fd-btn-light" id="shareBtn">Share ride</button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 lg:col-6">
+                        <div class="fd-map">
+                            <iframe
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=74.50,42.83,74.65,42.91&layer=mapnik&marker=42.87,74.59"
+                                title="City map"
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fd-section" id="drivers">
+            <div class="container">
+                <div class="fd-list-head">
+                    <h2 class="fd-list-title">Drivers nearby</h2>
+                    <span class="fd-count">Found: 4</span>
+                </div>
+
+                <article class="fd-driver fd-driver-best">
+                    <div class="fd-avatar">A</div>
+                    <div>
+                        <h3 class="fd-name">Azamat</h3>
+                        <span class="fd-rating">★ 4.9 <span class="fd-trips">· 312 rides</span></span>
+                        <p class="fd-car">White Toyota Camry</p>
+                    </div>
+                    <div class="fd-meta">
+                        <p class="fd-price">600 som</p>
+                        <p class="fd-eta">Arrives in 4 min</p>
+                    </div>
+                    <div class="fd-driver-actions">
+                        <button type="button" class="fd-btn fd-btn-light fd-write" data-name="Azamat">Message</button>
+                        <button type="button" class="fd-btn fd-pick" data-name="Azamat">Choose</button>
+                    </div>
+                </article>
+
+                <article class="fd-driver">
+                    <div class="fd-avatar">B</div>
+                    <div>
+                        <h3 class="fd-name">Bakyt</h3>
+                        <span class="fd-rating">★ 4.8 <span class="fd-trips">· 187 rides</span></span>
+                        <p class="fd-car">Gray Honda Fit</p>
+                    </div>
+                    <div class="fd-meta">
+                        <p class="fd-price">650 som</p>
+                        <p class="fd-eta">Arrives in 6 min</p>
+                    </div>
+                    <div class="fd-driver-actions">
+                        <button type="button" class="fd-btn fd-btn-light fd-write" data-name="Bakyt">Message</button>
+                        <button type="button" class="fd-btn fd-pick" data-name="Bakyt">Choose</button>
+                    </div>
+                </article>
+
+                <article class="fd-driver">
+                    <div class="fd-avatar">N</div>
+                    <div>
+                        <h3 class="fd-name">Nurlan</h3>
+                        <span class="fd-rating">★ 4.7 <span class="fd-trips">· 96 rides</span></span>
+                        <p class="fd-car">Black Hyundai Elantra</p>
+                    </div>
+                    <div class="fd-meta">
+                        <p class="fd-price">700 som</p>
+                        <p class="fd-eta">Arrives in 9 min</p>
+                    </div>
+                    <div class="fd-driver-actions">
+                        <button type="button" class="fd-btn fd-btn-light fd-write" data-name="Nurlan">Message</button>
+                        <button type="button" class="fd-btn fd-pick" data-name="Nurlan">Choose</button>
+                    </div>
+                </article>
+
+                <article class="fd-driver">
+                    <div class="fd-avatar">E</div>
+                    <div>
+                        <h3 class="fd-name">Erlan</h3>
+                        <span class="fd-rating">★ 4.9 <span class="fd-trips">· 241 rides</span></span>
+                        <p class="fd-car">Blue Kia Rio</p>
+                    </div>
+                    <div class="fd-meta">
+                        <p class="fd-price">720 som</p>
+                        <p class="fd-eta">Arrives in 11 min</p>
+                    </div>
+                    <div class="fd-driver-actions">
+                        <button type="button" class="fd-btn fd-btn-light fd-write" data-name="Erlan">Message</button>
+                        <button type="button" class="fd-btn fd-pick" data-name="Erlan">Choose</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <dialog class="fd-chat" id="chatDialog">
+        <div class="fd-chat-head">
+            <span id="chatName">Driver</span>
+            <button type="button" class="fd-chat-close" id="chatClose" aria-label="Close chat">✕</button>
+        </div>
+        <div class="fd-chat-body" id="chatBody"></div>
+        <form class="fd-chat-form" id="chatForm">
+            <input class="fd-chat-input" type="text" id="chatInput" placeholder="Type a message" autocomplete="off">
+            <button type="submit" class="fd-chat-send">Send</button>
+        </form>
+    </dialog>
+
+    <dialog class="fd-sos-dialog" id="sosDialog">
+        <div class="fd-sos-box">
+            <h2 class="fd-sos-title">SOS</h2>
+            <p class="fd-sos-text">If you are in danger, call the emergency services right away. You can also send your location to your loved ones.</p>
+            <a href="tel:112" class="fd-btn fd-sos-call">Call 112</a>
+            <button type="button" class="fd-btn fd-btn-light" id="sosLocation">Send my location</button>
+            <button type="button" class="fd-btn fd-btn-light" id="sosCancel">Cancel</button>
+        </div>
+    </dialog>
+
+    <button type="button" class="fd-sos" id="sosBtn" aria-label="Emergency help">SOS</button>
+
+    <div class="fd-toast" id="toast"></div>
+
+    <script>
+        const chatDialog = document.getElementById('chatDialog');
+        const chatName = document.getElementById('chatName');
+        const chatBody = document.getElementById('chatBody');
+        const chatForm = document.getElementById('chatForm');
+        const chatInput = document.getElementById('chatInput');
+        const sosDialog = document.getElementById('sosDialog');
+        const toast = document.getElementById('toast');
+
+        const greetings = {
+            'Azamat': 'Hello! I will be there in 4 minutes.',
+            'Bakyt': 'Good afternoon! I can be with you in 6 minutes.',
+            'Nurlan': 'Hello! I am free and will be there soon.',
+            'Erlan': 'Good afternoon! I am ready to go, write me if you need to clarify anything.'
+        };
+        const history = {};
+        let currentDriver = '';
+
+        function showToast(text) {
+            toast.textContent = text;
+            toast.classList.add('show');
+            setTimeout(function () {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        function renderChat() {
+            chatBody.innerHTML = '';
+            history[currentDriver].forEach(function (m) {
+                const div = document.createElement('div');
+                div.className = 'fd-msg ' + (m.from === 'me' ? 'fd-msg-me' : 'fd-msg-driver');
+                div.textContent = m.text;
+                chatBody.appendChild(div);
+            });
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        document.querySelectorAll('.fd-write').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                currentDriver = btn.dataset.name;
+                chatName.textContent = currentDriver;
+                if (!history[currentDriver]) {
+                    history[currentDriver] = [{ from: 'driver', text: greetings[currentDriver] }];
+                }
+                renderChat();
+                chatDialog.showModal();
+            });
+        });
+
+        chatForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const text = chatInput.value.trim();
+            if (text === '') return;
+            history[currentDriver].push({ from: 'me', text: text });
+            chatInput.value = '';
+            renderChat();
+        });
+
+        document.getElementById('chatClose').addEventListener('click', function () {
+            chatDialog.close();
+        });
+
+        document.querySelectorAll('.fd-pick').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                showToast('You chose the driver: ' + btn.dataset.name);
+            });
+        });
+
+        document.getElementById('shareBtn').addEventListener('click', function () {
+            const from = document.getElementById('fd-from').value || 'not specified';
+            const to = document.getElementById('fd-to').value || 'not specified';
+            const text = 'My ride with Joldo. From: ' + from + '. To: ' + to + '.';
+
+            if (navigator.share) {
+                navigator.share({ title: 'My ride', text: text, url: location.href }).catch(function () {});
+            } else if (navigator.clipboard) {
+                navigator.clipboard.writeText(text + ' ' + location.href).then(function () {
+                    showToast('Ride details copied');
+                }, function () {
+                    showToast('Could not copy');
+                });
+            } else {
+                showToast('Your browser does not support sharing');
+            }
+        });
+
+        document.getElementById('sosBtn').addEventListener('click', function () {
+            sosDialog.showModal();
+        });
+
+        document.getElementById('sosCancel').addEventListener('click', function () {
+            sosDialog.close();
+        });
+
+        document.getElementById('sosLocation').addEventListener('click', function () {
+            if (!navigator.geolocation) {
+                showToast('Location is not available');
+                return;
+            }
+            navigator.geolocation.getCurrentPosition(function (pos) {
+                const lat = pos.coords.latitude;
+                const lon = pos.coords.longitude;
+                const link = 'https://www.openstreetmap.org/?mlat=' + lat + '&mlon=' + lon + '#map=17/' + lat + '/' + lon;
+                const text = 'I need help! My location: ' + link;
+
+                if (navigator.share) {
+                    navigator.share({ text: text }).catch(function () {});
+                } else if (navigator.clipboard) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        showToast('Location copied');
+                    });
+                }
+            }, function () {
+                showToast('Could not determine your location');
+            });
+        });
+
+        [chatDialog, sosDialog].forEach(function (d) {
+            d.addEventListener('click', function (e) {
+                if (e.target === d) d.close();
+            });
+        });
+    </script>
+</body>
+</html>

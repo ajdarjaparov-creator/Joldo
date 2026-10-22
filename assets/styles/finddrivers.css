@@ -1,0 +1,412 @@
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #0f1214;
+}
+.div-btn-auth {
+    margin-right: 5px;
+}
+.div-btn-auth a {
+    color: inherit;
+    text-decoration: none;
+}
+.fd-section {
+    padding: 56px 0;
+}
+.fd-head {
+    margin-bottom: 40px;
+}
+.fd-title {
+    font-size: 44px;
+    font-weight: 700;
+    margin: 0;
+}
+.fd-line {
+    display: block;
+    width: 56px;
+    height: 3px;
+    background-color: black;
+    margin: 16px auto 0;
+}
+.fd-sub {
+    color: #5f6873;
+    font-size: 17px;
+    margin: 16px 0 0;
+}
+.fd-row > * {
+    min-width: 0;
+}
+.fd-switch {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f3f4f6;
+    border: 1px solid #e0e3e7;
+    border-radius: 30px;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+.fd-switch input {
+    position: absolute;
+    opacity: 0;
+}
+.fd-switch-bg {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    background-color: #0f1214;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+#when-later:checked ~ .fd-switch-bg {
+    transform: translateX(100%);
+}
+.fd-switch label {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 10px 22px;
+    color: #0f1214;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+#when-now:checked ~ label[for="when-now"],
+#when-later:checked ~ label[for="when-later"] {
+    color: #ffffff;
+}
+.fd-field {
+    position: relative;
+    margin-bottom: 12px;
+}
+.fd-input {
+    display: block;
+    width: 100%;
+    background-color: #f3f4f6;
+    color: #0f1214;
+    border: 1px solid #e0e3e7;
+    border-radius: 10px;
+    padding: 28px 20px 10px;
+    font-size: 18px;
+}
+.fd-input:focus {
+    outline: none;
+    border-color: #0f1214;
+    background-color: #ffffff;
+}
+.fd-label {
+    position: absolute;
+    left: 21px;
+    top: 20px;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #6b7280;
+    pointer-events: none;
+    transition: all 0.2s;
+}
+.fd-input:focus + .fd-label,
+.fd-input:not(:placeholder-shown) + .fd-label {
+    top: 8px;
+    font-size: 12px;
+}
+.fd-time {
+    max-height: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease, margin-bottom 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+}
+.fd-section:has(#when-later:checked) .fd-time {
+    max-height: 80px;
+    margin-bottom: 12px;
+    opacity: 1;
+    visibility: visible;
+}
+.fd-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+.fd-btn {
+    display: block;
+    background-color: #0f1214;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #0f1214;
+    border-radius: 10px;
+    padding: 16px 12px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.fd-btn:hover {
+    background-color: #2a2f33;
+    color: #ffffff;
+}
+.fd-btn-light {
+    background-color: #ffffff;
+    color: #0f1214;
+    border-color: #c9ced4;
+}
+.fd-btn-light:hover {
+    background-color: #f3f4f6;
+    color: #0f1214;
+}
+.fd-map {
+    height: 430px;
+    border: 1px solid #e0e3e7;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.fd-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.fd-list-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: end;
+    margin-bottom: 20px;
+}
+.fd-list-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+.fd-count {
+    color: #5f6873;
+    font-size: 16px;
+}
+.fd-driver {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 14px 16px;
+    align-items: center;
+    background-color: #f3f4f6;
+    border: 1px solid #e0e3e7;
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+}
+.fd-driver-best {
+    border-color: rgb(0, 0, 0);
+}
+.fd-avatar {
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: rgb(255, 255, 255);
+    color: #0f1214;
+    border-radius: 50%;
+}
+.fd-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+.fd-rating {
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+}
+.fd-trips {
+    color: #5f6873;
+    font-weight: 400;
+}
+.fd-car {
+    color: #5f6873;
+    font-size: 15px;
+    margin: 4px 0 0;
+}
+.fd-driver > * {
+    min-width: 0;
+}
+.fd-meta {
+    grid-column: 1 / -1;
+    text-align: left;
+}
+.fd-price {
+    font-size: 24px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin: 0;
+}
+.fd-eta {
+    color: #5f6873;
+    font-size: 15px;
+    margin: 4px 0 0;
+}
+.fd-driver-actions {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+.fd-driver-actions .fd-btn {
+    padding: 12px 18px;
+    font-size: 16px;
+}
+.fd-chat {
+    width: 420px;
+    max-width: 100%;
+    height: 560px;
+    max-height: 90vh;
+    padding: 0;
+    border: none;
+    border-radius: 18px;
+    background-color: #ffffff;
+    color: #0f1214;
+    overflow: hidden;
+}
+.fd-chat[open] {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.fd-chat::backdrop,
+.fd-sos-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+.fd-chat-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background-color: #0f1214;
+    color: #ffffff;
+    padding: 16px 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.fd-chat-close {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+}
+.fd-chat-body {
+    padding: 16px;
+    overflow-y: auto;
+    background-color: #f3f4f6;
+}
+.fd-msg {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.fd-msg-driver {
+    background-color: #ffffff;
+    border: 1px solid #e0e3e7;
+}
+.fd-msg-me {
+    background-color: #0f1214;
+    color: #ffffff;
+    margin-left: auto;
+}
+.fd-chat-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    padding: 12px;
+    border-top: 1px solid #e0e3e7;
+}
+.fd-chat-input {
+    border: 1px solid #e0e3e7;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 16px;
+}
+.fd-chat-input:focus {
+    outline: none;
+    border-color: #0f1214;
+}
+.fd-chat-send {
+    background-color: #0f1214;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.fd-sos {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 50;
+    width: 68px;
+    height: 68px;
+    background-color: #e5342b;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(229, 52, 43, 0.5);
+    cursor: pointer;
+}
+.fd-sos:hover {
+    background-color: #c8281f;
+}
+.fd-sos-dialog {
+    width: 400px;
+    max-width: calc(100% - 32px);
+    padding: 0;
+    border: none;
+    border-radius: 18px;
+    background-color: #ffffff;
+    color: #0f1214;
+}
+.fd-sos-box {
+    padding: 28px;
+    text-align: center;
+}
+.fd-sos-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #e5342b;
+    margin: 0 0 10px;
+}
+.fd-sos-text {
+    color: #5f6873;
+    line-height: 1.5;
+    margin: 0 0 20px;
+}
+.fd-sos-box .fd-btn {
+    margin-bottom: 10px;
+}
+.fd-sos-call {
+    background-color: #e5342b;
+    border-color: #e5342b;
+}
+.fd-sos-call:hover {
+    background-color: #c8281f;
+}
+.fd-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 100px;
+    z-index: 60;
+    transform: translateX(-50%) translateY(20px);
+    background-color: #0f1214;
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+.fd-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}

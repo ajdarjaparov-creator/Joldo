@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joldo - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/index.css">
+</head>
+    <body>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+        <!-- Навбар -->
+        <header>
+            <nav class="navbar lg:navbar-expand bg-1 fg-2" data-bs-theme="dark">
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center py-0" href="#" id="joldo-logo">
+                        <img src="assets/img/joldo-logo.svg" alt="Joldo">
+                    </a>
+                    <dialog class="drawer drawer-start" tabindex="-1" id="navbarLeftDrawer" aria-labelledby="navbarLeftDrawerLabel">
+                        <div class="drawer-header">
+                            <h5 class="drawer-title" id="navbarLeftDrawerLabel">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                        </div>
+                        <div class="drawer-body">
+                            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                                <li class="nav-item"><a class="nav-link"  aria-current="page" href="index-en.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#aboutus">About us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#poezdka">Ride</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#driver">For drivers</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
+                            </ul>
+                        </div>
+                    </dialog>
+                    <div class="div-btn-auth">
+                        <button type="button" class="btn">
+                            <a href="assets/pages/authorization-en.html">Log in</a>
+                        </button>
+                    </div>
+                    <button class="btn-icon" type="button" data-bs-toggle="menu" aria-expanded="false">
+                        <img src="assets/img/us.png" alt="" width="30px">
+                    </button>
+                    <div class="menu">
+                        <a class="menu-item" href="index.html">
+                            <img src="assets/img/kg.png" alt="" width="20px">
+                        </a>
+                        <a class="menu-item" href="index-ru.html">
+                            <img src="assets/img/ru.png" alt="" width="20px">
+                        </a>
+                    </div>
+                    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarLeftDrawer" aria-controls="navbarLeftDrawer" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!-- Основной контент -->
+        <main>
+            <section class="carusel">
+                <div id="carouselMain" class="carousel carousel-overlay slide">
+                    <div class="carousel-static-overlay">
+                        <h1>Safe rides <br> across the whole city <br> at your price</h1>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/img/taxi1.jpg" class="d-block w-100" alt="Taxi car">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/taxi2.jpg" class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/taxi3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <div class="carousel-overlay-controls">
+                        <div>
+                            <button class="btn-icon btn-sm btn-subtle theme-secondary" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
+                                <span class="carousel-icon-prev" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="btn-icon btn-sm btn-subtle theme-secondary" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
+                                <span class="carousel-icon-next" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                            </button>
+                            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ride-section py-7" id="poezdka">
+                <div class="container">
+                    <div class="ride-head text-center">
+                        <h2 class="ride-title">Book a ride</h2>
+                        <span class="ride-line"></span>
+                    </div>
+                    <div class="ride-row row align-items-center g-4">
+                        <!-- Форма -->
+                        <div class="col-6 ride-form-col">
+                            <div class="ride-switch">
+                                <input type="radio" name="when" id="when-now" checked>
+                                <input type="radio" name="when" id="when-later">
+                                <span class="ride-switch-bg"></span>
+                                <label for="when-now">Now</label>
+                                <label for="when-later">Schedule</label>
+                            </div>
+                            <div class="ride-field">
+                                <input class="ride-input" type="text" id="from" placeholder=" ">
+                                <label class="ride-label" for="from">Pick-up location</label>
+                            </div>
+                            <div class="ride-field">
+                                <input class="ride-input" type="text" id="to" placeholder=" ">
+                                <label class="ride-label" for="to">Drop-off location</label>
+                            </div>
+                            <div class="ride-field ride-time">
+                                <input class="ride-input" type="time" id="ride-time" placeholder=" ">
+                                <label class="ride-label" for="ride-time">Ride time</label>
+                            </div>
+                            <div class="ride-actions">
+                                <a href="assets/pages/find-drivers-en.html" class="ride-btn">See drivers</a>
+                                <a href="assets/pages/authorization-en.html" class="ride-login">Log in to see your rides</a>
+                            </div>
+                        </div>
+                        <!-- Карта -->
+                        <div class="col-6 ride-map-col">
+                            <div class="ride-map">
+                                <iframe
+                                    src="https://www.openstreetmap.org/export/embed.html?bbox=74.50,42.83,74.65,42.91&layer=mapnik&marker=42.87,74.59"
+                                    title="City map"
+                                    loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="service-section py-7">
+                <div class="container">
+                    <h2 class="service-title text-center">What you can do with Joldo</h2>
+                    <div class="service-row row g-3">
+                        <!-- Поездка -->
+                        <div class="col-12 lg:col-4">
+                            <div class="service-card">
+                                <div class="service-top">
+                                    <div>
+                                        <h3 class="service-name">Ride</h3>
+                                        <p class="service-text">Go anywhere with Joldo. Order a car, hop in and go.</p>
+                                    </div>
+                                <img class="service-icon" src="assets/img/taxishechka.png" alt="Taxi car">
+                                </div>
+                                <a href="#poezdka" class="service-btn">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="col-12 lg:col-4">
+                            <div class="service-card">
+                                <div class="service-top">
+                                    <div>
+                                        <h3 class="service-name">Book in advance</h3>
+                                        <p class="service-text">Book a ride in advance and relax on the day of your trip.</p>
+                                    </div>
+                                    <img class="service-icon" src="assets/img/stopwatch.png" alt="Stopwatch">
+                                </div>
+                                <a href="assets/pages/authorization-en.html" class="service-btn">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="col-12 lg:col-4">
+                            <div class="service-card">
+                                <div class="service-top">
+                                    <div>
+                                        <h3 class="service-name">Intercity</h3>
+                                        <p class="service-text">Book a ride to or from another city, with room for luggage.</p>
+                                    </div>
+                                    <img class="service-icon" src="assets/img/bus.png" alt="Bus">
+                                </div>
+                                <a href="#poezdka" class="service-btn">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-section py-7">
+                <div class="container">
+                    <div class="about-head text-center">
+                        <h1 class="about-title" id="aboutus">About us</h1>
+                        <span class="about-line"></span>
+                    </div>
+                    <div class="aboutus-row row align-items-center g-3">
+                        <!-- Видео -->
+                        <div class="col-6 about-media-col">
+                                <video class="about-videoapp" src="assets/video/taxiapp.mp4"
+                                autoplay muted loop playsinline></video>
+                        </div>
+                        <!-- Текст -->
+                        <div class="col-6 about-text-col">
+                            <div class="main-about">
+                            <p class="about-lead">
+                                <strong>Joldo</strong> - a taxi where you name the price
+                            </p>
+                            <p class="about-desc">
+                                This is an app where passengers and drivers negotiate the price themselves.
+                                Taking the best taxi model as a base, we made it uncompromisingly safe
+                                and kept the lowest prices on the market.
+                            </p>
+                            <ul class="about-points">
+                                <li>Fair price by agreement</li>
+                                <li>No hidden fees</li>
+                                <li>No imposed rates</li>
+                                <li>Safety first</li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="how-section py-7">
+                <div class="container">
+                    <h2 class="how-title text-center">How it works</h2>
+                    <div class="how-row row align-items-center g-4">
+                        <div class="col-12 lg:col-6 how-img-col">
+                            <img class="how-img" src="assets/img/phone-joldo" alt="How Joldo works">
+                        </div>
+                        <div class="col-12 lg:col-6">
+                            <ol class="stepper stepper-vertical how-stepper">
+                                <li class="stepper-item active">
+                                    Enter where to pick you up and where you are going
+                                </li>
+                                <li class="stepper-item"> 
+                                    Offer how much you are ready to pay for the ride
+                                </li>
+                                <li class="stepper-item">
+                                    Drivers respond, and you choose the right one.
+                                </li>
+                                <li class="stepper-item">
+                                    Get in the car and arrive at your destination.
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="driver-section py-7" id="driver">
+                <div class="container">
+                    <div class="driver-row row align-items-center g-5">
+                        <!-- Текст -->
+                        <div class="col-12 lg:col-5">
+                            <h2 class="driver-title">For drivers</h2>
+                            <span class="driver-line"></span>
+                            <p class="driver-lead">Earn on your own terms</p>
+                            <p class="driver-text">
+                                At Joldo, you negotiate the price with the passenger yourself.
+                                No hidden fees and no imposed rates.
+                            </p>
+                            <a href="assets/pages/become-driver-en.html" class="driver-btn">Become a driver</a>
+                        </div>
+                        <div class="col-12 lg:col-7">
+                            <div class="row g-3">
+                                <div class="col-6 driver-card-col">
+                                    <div class="driver-card">
+                                        <img class="driver-icon" src="assets/img/dollar-banknote.png">
+                                        <h3 class="driver-card-title">Your own price</h3>
+                                        <p class="driver-card-text">You decide how much to charge for a ride.</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 driver-card-col">
+                                    <div class="driver-card">
+                                        <img class="driver-icon" src="assets/img/spiral-calendar.png">
+                                        <h3 class="driver-card-title">Flexible schedule</h3>
+                                        <p class="driver-card-text">Work whenever it suits you.</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 driver-card-col">
+                                    <div class="driver-card">
+                                        <img class="driver-icon" src="assets/img/ok-hand.png">
+                                        <h3 class="driver-card-title">Nearby orders</h3>
+                                        <p class="driver-card-text">Passengers find you in your area.</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 driver-card-col">
+                                    <div class="driver-card">
+                                        <img class="driver-icon" src="assets/img/shield.png">
+                                        <h3 class="driver-card-title">Safety</h3>
+                                        <p class="driver-card-text">Rides are protected and have clear rules.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact-section py-7" id="contacts">
+                <div class="container">
+                    <div class="contact-head text-center">
+                        <h2 class="contact-title">Contacts</h2>
+                        <span class="contact-line"></span>
+                    </div>
+                    <div class="contact-row row g-5">
+                        <div class="col-12 lg:col-5">
+                            <div class="contact-item">
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+996000000000" class="contact-value">+996 000 000 000</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:info@joldo.kg" class="contact-value">info@joldo.kg</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Address</span>
+                                <span class="contact-value">131 Toombai Baizakov Street</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Working hours</span>
+                                <span class="contact-value">Daily, 9:00 — 21:00</span>
+                            </div>
+                        </div>
+                        <div class="col-12 lg:col-7">
+                            <form class="contact-form" action="#" method="post">
+                                <div class="contact-field">
+                                    <input class="contact-input" type="text" id="c-name" name="name" placeholder=" " required>
+                                    <label class="contact-field-label" for="c-name">Your name</label>
+                                </div>
+                                <div class="contact-field">
+                                    <input class="contact-input" type="tel" id="c-phone" name="phone" placeholder=" " required>
+                                    <label class="contact-field-label" for="c-phone">Phone</label>
+                                </div>
+                                <div class="contact-field">
+                                    <textarea class="contact-input" id="c-msg" name="message" placeholder=" " rows="3"></textarea>
+                                    <label class="contact-field-label" for="c-msg">Message</label>
+                                </div>
+                                <button type="submit" class="contact-btn">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Футенр -->
+        <footer class="footer-section py-5">
+            <div class="container">
+                <div class="footer-row row g-4">
+                    <div class="col-12 lg:col-4">
+                        <a href=""><img src="assets/img/joldo-logo.svg" alt="Joldo"></a>
+                        <p class="footer-text">
+                            A taxi where you name the price. No hidden fees and no imposed rates.
+                        </p>
+                    </div>
+                    <div class="col-6 lg:col-4">
+                        <h4 class="footer-heading">Sections</h4>
+                        <ul class="footer-list">
+                            <li><a href="#aboutus">About us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#how">How it works</a></li>
+                            <li><a href="#drivers">For drivers</a></li>
+                            <li><a href="#contacts">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 lg:col-4">
+                        <h4 class="footer-heading">Contacts</h4>
+                        <ul class="footer-list">
+                            <li><a href="tel:+996000000000">+996 000 000 000</a></li>
+                            <li><a href="mailto:joldo@gmail.com">joldo@gmail.com</a></li>
+                            <li>Daily, 9:00 — 21:00</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© 2026 Joldo. All rights reserved.</span>
+                    <a href="#top">Back to top ↑</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

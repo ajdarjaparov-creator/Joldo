@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joldo - Башкы бет</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/index.css">
+</head>
+    <body>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+        <!-- Навбар -->
+        <header>
+            <nav class="navbar lg:navbar-expand bg-1 fg-2" data-bs-theme="dark">
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center py-0" href="#" id="joldo-logo">
+                        <img src="assets/img/joldo-logo.svg" alt="Joldo">
+                    </a>
+                    <dialog class="drawer drawer-start" tabindex="-1" id="navbarLeftDrawer" aria-labelledby="navbarLeftDrawerLabel">
+                        <div class="drawer-header">
+                            <h5 class="drawer-title" id="navbarLeftDrawerLabel">Меню</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                        </div>
+                        <div class="drawer-body">
+                            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                                <li class="nav-item"><a class="nav-link"  aria-current="page" href="index-en.html">Башкы бет</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#aboutus">Биз жөнүндө</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#poezdka">Сапар</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#driver">Айдоочуларга</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#contacts">Байланыш</a></li>
+                            </ul>
+                        </div>
+                    </dialog>
+                    <div class="div-btn-auth">
+                        <button type="button" class="btn">
+                            <a  class="ssilka" href="assets/pages/authorization.html">Кирүү</a>
+                        </button>
+                    </div>
+                    <button class="btn-icon" type="button" data-bs-toggle="menu" aria-expanded="false">
+                        <img src="assets/img/kg.png" alt="" width="30px">
+                    </button>
+                    <div class="menu">
+                        <a class="menu-item" href="index-ru.html">
+                            <img src="assets/img/ru.png" alt="" width="20px">
+                        </a>
+                        <a class="menu-item" href="index-en.html">
+                            <img src="assets/img/us.png" alt="" width="20px">
+                        </a>
+                    </div>
+                    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarLeftDrawer" aria-controls="navbarLeftDrawer" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!-- Основной контент -->
+        <main>
+            <section class="carusel">
+                <div id="carouselMain" class="carousel carousel-overlay slide">
+                    <div class="carousel-static-overlay">
+                        <h1>Коопсуз сапарлар <br> бүткүл шаар боюнча <br> сиздин баа боюнча</h1>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/img/taxi1.jpg" class="d-block w-100" alt="Такси машинасы">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/taxi2.jpg" class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/taxi3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <div class="carousel-overlay-controls">
+                        <div>
+                            <button class="btn-icon btn-sm btn-subtle theme-secondary" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
+                                <span class="carousel-icon-prev" aria-hidden="true"></span>
+                                <span class="visually-hidden">Мурунку</span>
+                            </button>
+                            <button class="btn-icon btn-sm btn-subtle theme-secondary" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
+                                <span class="carousel-icon-next" aria-hidden="true"></span>
+                                <span class="visually-hidden">Кийинки</span>
+                            </button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                            </button>
+                            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ride-section py-7" id="poezdka">
+                <div class="container">
+                    <div class="ride-head text-center">
+                        <h2 class="ride-title">Сапарга буюртма бериңиз</h2>
+                        <span class="ride-line"></span>
+                    </div>
+                    <div class="ride-row row align-items-center g-4">
+                        <!-- Форма -->
+                        <div class="col-6 ride-form-col">
+                            <div class="ride-switch">
+                                <input type="radio" name="when" id="when-now" checked>
+                                <input type="radio" name="when" id="when-later">
+                                <span class="ride-switch-bg"></span>
+                                <label for="when-now">Азыр</label>
+                                <label for="when-later">Пландаштыруу</label>
+                            </div>
+                            <div class="ride-field">
+                                <input class="ride-input" type="text" id="from" placeholder=" ">
+                                <label class="ride-label" for="from">Кайдан алуу керек</label>
+                            </div>
+                            <div class="ride-field">
+                                <input class="ride-input" type="text" id="to" placeholder=" ">
+                                <label class="ride-label" for="to">Кайда барабыз</label>
+                            </div>
+                            <div class="ride-field ride-time">
+                                <input class="ride-input" type="time" id="ride-time" placeholder=" ">
+                                <label class="ride-label" for="ride-time">Сапардын убактысы</label>
+                            </div>
+                            <div class="ride-actions">
+                                <a href="assets/pages/find-drivers.html" class="ride-btn">Айдоочуларды көрүү</a>
+                                <a href="assets/pages/authorization.html" class="ride-login">Сапарларыңызды көрүү үчүн кириңиз</a>
+                            </div>
+                        </div>
+                        <!-- Карта -->
+                        <div class="col-6 ride-map-col">
+                            <div class="ride-map">
+                                <iframe
+                                    src="https://www.openstreetmap.org/export/embed.html?bbox=74.50,42.83,74.65,42.91&layer=mapnik&marker=42.87,74.59"
+                                    title="Шаардын картасы"
+                                    loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="service-section py-7">
+                <div class="container">
+                    <h2 class="service-title text-center">Joldo менен эмне кылса болот</h2>
+                    <div class="service-row row g-3">
+                        <!-- Поездка -->
+                        <div class="col-12 lg:col-4">
+                            <div class="service-card">
+                                <div class="service-top">
+                                    <div>
+                                        <h3 class="service-name">Сапар</h3>
+                                        <p class="service-text">Joldo менен каалаган жакка барыңыз. Машина чакырыңыз, отуруңуз жана жөнөңүз.</p>
+                                    </div>
+                                <img class="service-icon" src="assets/img/taxishechka.png" alt="Такси машинасы">
+                                </div>
+                                <a href="#poezdka" class="service-btn">Кененирээк</a>
+                            </div>
+                        </div>
+                        <div class="col-12 lg:col-4">
+                            <div class="service-card">
+                                <div class="service-top">
+                                    <div>
+                                        <h3 class="service-name">Алдын ала буюртма</h3>
+                                        <p class="service-text">Сапарга алдын ала буюртма бериңиз жана жөнөгөн күнү тынч болуңуз.</p>
+                                    </div>
+                                    <img class="service-icon" src="assets/img/stopwatch.png" alt="Секундомер">
+                                </div>
+                                <a href="assets/pages/authorization.html" class="service-btn">Кененирээк</a>
+                            </div>
+                        </div>
+                        <div class="col-12 lg:col-4">
+                            <div class="service-card">
+                                <div class="service-top">
+                                    <div>
+                                        <h3 class="service-name">Шаарлар аралык</h3>
+                                        <p class="service-text">Башка шаарга же башка шаардан сапарга буюртма бериңиз, жүк үчүн орду менен.</p>
+                                    </div>
+                                    <img class="service-icon" src="assets/img/bus.png" alt="Автобус">
+                                </div>
+                                <a href="#poezdka" class="service-btn">Кененирээк</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-section py-7">
+                <div class="container">
+                    <div class="about-head text-center">
+                        <h1 class="about-title" id="aboutus">Биз жөнүндө</h1>
+                        <span class="about-line"></span>
+                    </div>
+                    <div class="aboutus-row row align-items-center g-3">
+                        <!-- Видео -->
+                        <div class="col-6 about-media-col">
+                                <video class="about-videoapp" src="assets/video/taxiapp.mp4"
+                                autoplay muted loop playsinline></video>
+                        </div>
+                        <!-- Текст -->
+                        <div class="col-6 about-text-col">
+                            <div class="main-about">
+                            <p class="about-lead">
+                                <strong>Joldo</strong> - баасын сиз айткан такси
+                            </p>
+                            <p class="about-desc">
+                                Бул жүргүнчүлөр менен айдоочулар баасын өздөрү макулдашкан тиркеме.
+                                Мыкты такси моделин негиз алып, аны толугу менен коопсуз кылдык
+                                жана рыноктогу эң төмөн бааларды сактап калдык.
+                            </p>
+                            <ul class="about-points">
+                                <li>Макулдашуу боюнча адилет баа</li>
+                                <li>Жашыруун комиссиялар жок</li>
+                                <li>Мажбурланган тарифтер жок</li>
+                                <li>Коопсуздук биринчи орунда</li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="how-section py-7">
+                <div class="container">
+                    <h2 class="how-title text-center">Бул кантип иштейт</h2>
+                    <div class="how-row row align-items-center g-4">
+                        <div class="col-12 lg:col-6 how-img-col">
+                            <img class="how-img" src="assets/img/phone-joldo" alt="Joldo кантип иштейт">
+                        </div>
+                        <div class="col-12 lg:col-6">
+                            <ol class="stepper stepper-vertical how-stepper">
+                                <li class="stepper-item active">
+                                    Сизди кайдан алуу керектигин жана кайда бара турганыңызды киргизиңиз
+                                </li>
+                                <li class="stepper-item"> 
+                                    Сапар үчүн канча төлөөгө даяр экениңизди сунуштаңыз
+                                </li>
+                                <li class="stepper-item">
+                                    Айдоочулар жооп беришет, ал эми сиз ылайыктуусун тандайсыз.
+                                </li>
+                                <li class="stepper-item">
+                                    Машинага отуруңуз жана жеткен жериңизге барыңыз.
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="driver-section py-7" id="driver">
+                <div class="container">
+                    <div class="driver-row row align-items-center g-5">
+                        <!-- Текст -->
+                        <div class="col-12 lg:col-5">
+                            <h2 class="driver-title">Айдоочулар үчүн</h2>
+                            <span class="driver-line"></span>
+                            <p class="driver-lead">Өз шарттарыңызда акча табыңыз</p>
+                            <p class="driver-text">
+                                Joldo'до баасын жүргүнчү менен өзүңүз макулдашасыз.
+                                Жашыруун комиссиялар жана мажбурланган тарифтер жок.
+                            </p>
+                            <a href="assets/pages/become-driver.html" class="driver-btn">Айдоочу болуу</a>
+                        </div>
+                        <div class="col-12 lg:col-7">
+                            <div class="row g-3">
+                                <div class="col-6 driver-card-col">
+                                    <div class="driver-card">
+                                        <img class="driver-icon" src="assets/img/dollar-banknote.png">
+                                        <h3 class="driver-card-title">Өз баа</h3>
+                                        <p class="driver-card-text">Канчага баруу керектигин өзүңүз чечесиз.</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 driver-card-col">
+                                    <div class="driver-card">
+                                        <img class="driver-icon" src="assets/img/spiral-calendar.png">
+                                        <h3 class="driver-card-title">Эркин график</h3>
+                                        <p class="driver-card-text">Сизге ыңгайлуу убакытта иштеңиз.</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 driver-card-col">
+                                    <div class="driver-card">
+                                        <img class="driver-icon" src="assets/img/ok-hand.png">
+                                        <h3 class="driver-card-title">Жакын жердеги буйрутмалар</h3>
+                                        <p class="driver-card-text">Жүргүнчүлөр сизди өз районуңузда табышат.</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 driver-card-col">
+                                    <div class="driver-card">
+                                        <img class="driver-icon" src="assets/img/shield.png">
+                                        <h3 class="driver-card-title">Коопсуздук</h3>
+                                        <p class="driver-card-text">Сапарлар коргоо астында жана түшүнүктүү эрежелер менен.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact-section py-7" id="contacts">
+                <div class="container">
+                    <div class="contact-head text-center">
+                        <h2 class="contact-title">Байланыш</h2>
+                        <span class="contact-line"></span>
+                    </div>
+                    <div class="contact-row row g-5">
+                        <div class="col-12 lg:col-5">
+                            <div class="contact-item">
+                                <span class="contact-label">Телефон</span>
+                                <a href="tel:+996000000000" class="contact-value">+996 000 000 000</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Почта</span>
+                                <a href="mailto:info@joldo.kg" class="contact-value">info@joldo.kg</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Дарек</span>
+                                <span class="contact-value">Тоомбай Байзаков көчөсү, 131</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Иш убактысы</span>
+                                <span class="contact-value">Күн сайын, 9:00 — 21:00</span>
+                            </div>
+                        </div>
+                        <div class="col-12 lg:col-7">
+                            <form class="contact-form" action="#" method="post">
+                                <div class="contact-field">
+                                    <input class="contact-input" type="text" id="c-name" name="name" placeholder=" " required>
+                                    <label class="contact-field-label" for="c-name">Сиздин атыңыз</label>
+                                </div>
+                                <div class="contact-field">
+                                    <input class="contact-input" type="tel" id="c-phone" name="phone" placeholder=" " required>
+                                    <label class="contact-field-label" for="c-phone">Телефон</label>
+                                </div>
+                                <div class="contact-field">
+                                    <textarea class="contact-input" id="c-msg" name="message" placeholder=" " rows="3"></textarea>
+                                    <label class="contact-field-label" for="c-msg">Билдирүү</label>
+                                </div>
+                                <button type="submit" class="contact-btn">Жөнөтүү</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Футенр -->
+        <footer class="footer-section py-5">
+            <div class="container">
+                <div class="footer-row row g-4">
+                    <div class="col-12 lg:col-4">
+                        <a href=""><img src="assets/img/joldo-logo.svg" alt="Joldo"></a>
+                    </div>
+                    <div class="col-6 lg:col-4">
+                        <h4 class="footer-heading">Бөлүмдөр</h4>
+                        <ul class="footer-list">
+                            <li><a href="#aboutus">Биз жөнүндө</a></li>
+                            <li><a href="#services">Кызматтар</a></li>
+                            <li><a href="#how">Бул кантип иштейт</a></li>
+                            <li><a href="#drivers">Айдоочулар үчүн</a></li>
+                            <li><a href="#contacts">Байланыш</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 lg:col-4">
+                        <h4 class="footer-heading">Байланыш</h4>
+                        <ul class="footer-list">
+                            <li><a href="tel:+996000000000">+996 000 000 000</a></li>
+                            <li><a href="mailto:joldo@gmail.com">joldo@gmail.com</a></li>
+                            <li>Күн сайын, 9:00 — 21:00</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© 2026 Joldo. Бардык укуктар корголгон.</span>
+                    <a href="#top">Өйдө ↑</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

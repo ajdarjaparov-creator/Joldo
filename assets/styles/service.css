@@ -1,0 +1,53 @@
+.service-section {
+    background-color: #ffffff;
+    color: #0f1214;
+}
+.service-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+.service-row > * {
+    min-width: 0;
+}
+.service-card {
+    background-color: #f3f4f6;
+    border-radius: 12px;
+    padding: 20px;
+    height: 100%;
+}
+.service-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.service-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.service-text {
+    color: #5f6873;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+.service-icon {
+    font-size: 64px;
+    line-height: 1;
+    width: 110px;
+}
+.service-btn {
+    display: inline-block;
+    background-color: #0f1214;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 10px 22px;
+}
+.service-btn:hover {
+    background-color: #2a2f33;
+    color: #ffffff;
+}

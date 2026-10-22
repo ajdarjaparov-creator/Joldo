@@ -1,0 +1,247 @@
+@import url(mobile.css);
+
+body {
+    margin: 0;
+    background-color: #0f1214;
+    color: white;
+}
+#ssilka{
+    text-decoration: none;
+    color: white;
+}
+#btn{
+    padding-left: 15px;
+}
+.reg-header {
+    height: 64px;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 40px;
+    align-items: center;
+    background-color: #0f1214;
+    border-bottom: 1px solid #1d2227;
+}
+.reg-logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+.reg-nav a {
+    color: #9aa4ae;
+    text-decoration: none;
+    margin-right: 24px;
+    font-size: 15px;
+}
+.reg-nav a:hover,
+.reg-nav a.active {
+    color: white;
+}
+.reg-header-right a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: #1b1f23;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-left: 12px;
+    font-size: 15px;
+}
+.reg-row {
+    margin: 0;
+}
+.reg-row > * {
+    padding: 0;
+    min-width: 0;
+}
+.reg-hero {
+    min-height: calc(100vh - 64px);
+    padding: 90px 64px;
+    background-color: #1b1f23;
+    background-image:
+        linear-gradient(to bottom, rgba(15, 18, 20, 0.35), rgba(15, 18, 20, 0.75)),
+        url("../img/taxi4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.reg-hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 16px;
+}
+.reg-hero-text {
+    max-width: 340px;
+    color: #e2e6ea;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.reg-form-col {
+    min-height: calc(100vh - 64px);
+    padding: 48px 32px;
+}
+.reg-form {
+    max-width: 480px;
+    margin: 0 auto;
+}
+.reg-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.reg-sub {
+    color: #9aa4ae;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+.reg-social {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.reg-social-btn {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1f23;
+    color: white;
+    border: 1px solid #2a2f33;
+    border-radius: 10px;
+    padding: 14px 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.reg-social-btn:hover {
+    background-color: #23282c;
+}
+.reg-or {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 14px;
+    align-items: center;
+    color: #9aa4ae;
+    font-size: 14px;
+    margin: 22px 0;
+}
+.reg-or::before,
+.reg-or::after {
+    content: "";
+    height: 1px;
+    background-color: #2a2f33;
+}
+.reg-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.reg-field {
+    position: relative;
+    margin-bottom: 18px;
+}
+.reg-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+.reg-input {
+    display: block;
+    width: 100%;
+    background-color: #1b1f23;
+    color: white;
+    border: 1px solid #2a2f33;
+    border-radius: 10px;
+    padding: 16px 18px;
+    font-size: 16px;
+}
+.reg-input::placeholder {
+    color: #6b7580;
+}
+.reg-input:focus {
+    outline: none;
+    border-color: white;
+}
+.reg-input-icon {
+    padding-left: 48px;
+}
+.reg-icon {
+    position: absolute;
+    left: 16px;
+    top: 62%;
+    transform: translateY(-50%);
+}
+.reg-eye {
+    position: absolute;
+    right: 8px;
+    top: 62%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+.reg-file {
+    padding: 12px 14px;
+    color: #9aa4ae;
+    font-size: 15px;
+}
+.reg-file::file-selector-button {
+    background-color: #f3f4f6;
+    color: #0f1214;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-right: 12px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.reg-hint {
+    color: #6b7580;
+    font-size: 13px;
+    margin: 6px 0 0;
+}
+.login-forgot {
+    text-align: right;
+    margin: -6px 0 18px;
+    font-size: 14px;
+}
+.login-forgot a {
+    color: #9aa4ae;
+    text-decoration: none;
+}
+.login-forgot a:hover {
+    color: white;
+}
+.reg-btn {
+    display: block;
+    width: 100%;
+    background-color: #f3f4f6;
+    color: #0f1214;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.reg-btn:hover {
+    background-color: white;
+}
+.reg-login {
+    text-align: center;
+    color: #9aa4ae;
+    font-size: 15px;
+    margin: 22px 0 0;
+}
+.reg-login a {
+    color: white;
+    text-decoration: none;
+}
+.reg-login a:hover {
+    text-decoration: underline;
+}

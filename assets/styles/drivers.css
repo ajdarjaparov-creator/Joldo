@@ -1,0 +1,68 @@
+.driver-section {
+    background-color: #ffffff;
+    color: #0f1214;
+}
+.driver-row > * {
+    min-width: 0;
+}
+.driver-title {
+    font-size: 44px;
+    font-weight: 700;
+    margin: 0;
+}
+.driver-line {
+    display: block;
+    width: 56px;
+    height: 3px;
+    background-color: black;
+    margin: 16px 0 28px;
+}
+.driver-lead {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.driver-text {
+    color: #5f6873;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+.driver-btn {
+    display: inline-block;
+    background-color: #0f1214;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 16px 28px;
+}
+.driver-btn:hover {
+    background-color: #2a2f33;
+    color: #ffffff;
+}
+.driver-card-col {
+    min-width: 0;
+}
+.driver-card {
+    background-color: #f3f4f6;
+    border: 1px solid #e0e3e7;
+    border-radius: 16px;
+    padding: 24px;
+    height: 100%;
+}
+.driver-icon {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+}
+.driver-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.driver-card-text {
+    color: #5f6873;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
